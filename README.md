@@ -21,7 +21,7 @@ O método `wa.me` permite que você adicione um link direto de conversa no Whats
 
 ### Passo 1 — Criar a Coluna Calculada DAX
 
-A URL do WhatsApp segue o formato: `https://wa.me/5511999999999`
+A URL do WhatsApp segue o formato: `https://wa.me/55619xxx-xxxx`
 
 O número precisa estar no **formato internacional** sem espaços, parênteses ou traços.
 
