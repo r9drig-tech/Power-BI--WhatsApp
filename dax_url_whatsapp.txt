@@ -1,0 +1,45 @@
+-- =============================================
+-- Link do WhatsApp no Power BI (wa.me)
+-- Substitua [ds_celular] pela sua coluna
+-- =============================================
+
+URL WhatsApp =
+VAR _numero =
+    SUBSTITUTE(
+        SUBSTITUTE(
+            SUBSTITUTE(
+                SUBSTITUTE(
+                    SUBSTITUTE([ds_celular], " ", ""),
+                ",", ""),
+            "(", ""),
+        ")", ""),
+    "-", "")
+VAR _numero_intl = "55" & _numero
+RETURN
+    "https://wa.me/" & _numero_intl
+
+-- =============================================
+-- Versão com validação de DDI e 9º dígito
+-- =============================================
+
+URL WhatsApp v2 =
+VAR _limpo =
+    SUBSTITUTE(
+        SUBSTITUTE(
+            SUBSTITUTE(
+                SUBSTITUTE(
+                    SUBSTITUTE([ds_celular], " ", ""),
+                ",", ""),
+            "(", ""),
+        ")", ""),
+    "-", "")
+VAR _com_ddi =
+    IF(LEFT(_limpo, 2) = "55", _limpo, "55" & _limpo)
+VAR _final =
+    IF(
+        LEN(_com_ddi) = 12,
+        LEFT(_com_ddi, 4) & "9" & RIGHT(_com_ddi, 8),
+        _com_ddi
+    )
+RETURN
+    "https://wa.me/" & _final
