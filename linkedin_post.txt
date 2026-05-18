@@ -1,0 +1,42 @@
+🟢 LINK DO WHATSAPP NO POWER BI — Sem API, Sem Custo, 100% DAX
+
+Você sabia que dá pra colocar um link clicável do WhatsApp direto no seu relatório Power BI em apenas 3 passos?
+
+Muita gente acha que precisa de integração complexa ou API paga. Não precisa. 👇
+
+━━━━━━━━━━━━━━━━━━━━━
+
+𝗣𝗮𝘀𝘀𝗼 𝟭 — Crie a coluna calculada no DAX
+
+A fórmula usa SUBSTITUTE aninhado para limpar o número (remove espaços, traços e parênteses) e monta a URL no formato internacional:
+
+URL WhatsApp = "https://wa.me/55" & _numero_limpo
+
+𝗣𝗮𝘀𝘀𝗼 𝟮 — Categorize como "URL da Web"
+
+Na Visão de Dados → selecione a coluna → Ferramentas de Coluna → Categoria de Dados → URL da Web
+
+𝗣𝗮𝘀𝘀𝗼 𝟯 — Ative no visual
+
+Em Tabela/Matriz: ligue "Valor do URL" no painel de formatação
+Como Botão: Ação → URL da Web → aponte para a coluna
+
+━━━━━━━━━━━━━━━━━━━━━
+
+⚠️ Importante saber:
+
+✅ wa.me = 100% gratuito para envio manual (1 a 1)
+✅ Funciona no Power BI Service e App Mobile
+❌ Não abre no Power BI Desktop
+❌ Para disparos automáticos em massa → API paga (Z-API, 360dialog)
+
+━━━━━━━━━━━━━━━━━━━━━
+
+🔗 Guia completo com DAX, exemplos e dicas avançadas no GitHub:
+👉 github.com/r9drig-tech/Power-BI--WhatsApp
+
+Salva esse post, vai ser útil na próxima dashboard de vendas! 💾
+
+━━━━━━━━━━━━━━━━━━━━━
+
+#PowerBI #DAX #WhatsApp #BusinessIntelligence #DataAnalytics #PowerBIDicas #BI #Dashboards #DataVisualization #Dados #AnalistaDeDados #PowerBIBrasil
